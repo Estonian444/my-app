@@ -1,0 +1,10 @@
+.content img {
+    width: 800px;
+    grid-column-start: auto;
+  }
+  
+  .content {
+    grid-area: c;
+    background-color: rgb(116, 201, 229);
+  }
+  
