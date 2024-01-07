@@ -13,30 +13,7 @@
       
 }
 
-.header {
-  grid-area: h;
-  background-color: aquamarine;
-}
 
-.header img {
-  width: 90px;
-}
-
-.nav {
-  grid-area: n;
-  background-color: aqua;
-  
-}
-
-.content img {
-  width: 800px;
-  grid-column-start: auto;
-}
-
-.content {
-  grid-area: c;
-  background-color: rgb(116, 201, 229);
-}
 
 
 
