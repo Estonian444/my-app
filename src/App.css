@@ -8,12 +8,12 @@
 
     grid-template-rows: 80px 1fr;
       grid-template-columns: 2fr 10fr;
-      grid-gap: 5px;   
+         
 }
 
 .app-wrapper-content {
   grid-area: c;
-  background-color: aqua;
+  background-color: rgba(18, 28, 28, 0.83);
 }
 
 

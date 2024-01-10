@@ -1,7 +1,13 @@
 .nav {
   grid-area: n;
-  background-color: aqua;   
+  background-color: rgba(18, 28, 28, 0.83);  
+  padding: 20px; 
 }
+
+.item a {
+  color: aliceblue;
+}
+
 
 .item {
   color: aliceblue;

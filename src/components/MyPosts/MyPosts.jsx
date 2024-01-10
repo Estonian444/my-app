@@ -7,16 +7,20 @@ const MyPosts = () => {
     return (
         <div>
             <div>
-                My post
+                <h3>My post</h3>
             </div>
             <div>
-                <textarea></textarea>
-                <button>Add post</button>
-                
+                <div>
+                    <textarea></textarea>
+                </div>
+                <div>
+                    <button>Add post</button>
+                </div>
+
             </div>
             <div className={s.posts}>
-                <Post message='Hi, how are you' like= '6' />
-                <Post message='Its my first post' like= '15' />
+                <Post message='Hi, how are you' like='6' />
+                <Post message='Its my first post' like='15' />
             </div>
         </div>
     )
