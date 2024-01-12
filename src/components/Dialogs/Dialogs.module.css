@@ -10,6 +10,7 @@
 
 .dialogsItems {
     padding: 10px;
+    color: aliceblue;
     
 }
 
@@ -19,5 +20,10 @@
 
 .messages {
     padding: 10px;
+}
+
+
+.messages .message {
+    color: aliceblue;
 }
 

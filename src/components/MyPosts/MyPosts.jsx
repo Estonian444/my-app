@@ -3,7 +3,13 @@ import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
+ 
+
+    let postElement = 
+    props.posts.map (p => <Post message={p.message} like={p.like} />)
+
     return (
         <div>
             <div>
@@ -16,11 +22,9 @@ const MyPosts = () => {
                 <div>
                     <button>Add post</button>
                 </div>
-
             </div>
             <div className={s.posts}>
-                <Post message='Hi, how are you' like='6' />
-                <Post message='Its my first post' like='15' />
+                {postElement}
             </div>
         </div>
     )
