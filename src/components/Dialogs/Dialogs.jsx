@@ -7,19 +7,26 @@ import Messages from "./Messages/Messages"
 const Dialogs = (props) => { 
 
   
-    let dialogsElement = props.dialogs
+    let dialogsElement = props.state.dialogs
         .map( d => <Dialogitem name={d.name} id={d.id} />);
 
-    let messagesElement = props.messages
+    let messagesElement = props.state.messages
         .map( m => <Messages message={m.message} />)
 
     return (
         <div className={s.dialogs}>
+
             <div className={s.dialogsItems}>
                 {dialogsElement}
             </div>
             <div className={s.messages}>
                 {messagesElement}
+                <div className={s.postContent}>
+                    <textarea name='postContent' rows={4} cols={40} />
+                    <div>
+                        <button>Отправить</button>
+                 </div>
+                </div>
             </div>
         </div>
     )
