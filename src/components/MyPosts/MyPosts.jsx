@@ -4,29 +4,32 @@ import Post from './Post/Post';
 
 
 const MyPosts = (props) => {
-
-    let newPostElement = React.createRef();
-
     let postElement = 
     props.posts.map (p => <Post message={p.message} like={p.like} />)
 
+    let newPostElement = React.createRef();
+
     let addPost = () => {
-        debugger;
+        props.addPost();
+    }
+
+    let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.addPost(text);
+        props.updataNewPostText(text);
     }
 
     return (
         <div>
-            <div>
-                <h3>My post</h3>
+            <div className={s.postsBlock}>
+                <h3>My posts</h3>
             </div>
             <div>
                 <div>
-                    <textarea ref={newPostElement} rows={4} cols={40} />
+                    <textarea onChange={onPostChange} ref={newPostElement} 
+                            value={props.newPostText}/>
                 </div>
                 <div>
-                    <button onClick={ addPost }>Add post</button>
+                    <button onClick={ addPost }>Опубликовать</button>
                 </div>
             </div>
             <div className={s.posts}>

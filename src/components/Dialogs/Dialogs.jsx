@@ -5,6 +5,7 @@ import Messages from "./Messages/Messages"
 
 
 const Dialogs = (props) => { 
+    
 
   
     let dialogsElement = props.state.dialogs

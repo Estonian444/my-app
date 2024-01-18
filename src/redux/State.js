@@ -1,9 +1,14 @@
+let rerenderEntireTree = () => {
+    console.log('State')
+}
+
 let state = {
     profilePage: {
         posts: [
             { id: 1, message: 'Hi, how are you', like: 10 },
             { id: 2, message: 'Its my first post', like: 18 },
         ],
+        newPostText: 'ga'
 
     },
     dialogPage: {
@@ -24,15 +29,24 @@ let state = {
 
 }
 
-export let addPost = (postMessage) => {
-    debugger;
+export let addPost = () => {
     let newPost = {
         id: 5,
-        message: postMessage,
+        message: state.profilePage.newPostText,
         like: 0
     };
-
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText = '';
+    rerenderEntireTree(state);
+}
+
+export let updataNewPostText = (newText) => {
+    state.profilePage.newPostText = newText;
+    rerenderEntireTree(state);
+}
+
+export const subscride = (observer) => {
+    rerenderEntireTree = observer
 }
 
 export default state
