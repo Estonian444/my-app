@@ -25,9 +25,25 @@ let state = {
             { id: 4, name: 'Nasty' },
             { id: 5, name: 'Dima' },
         ],
+        newMessagesText: "hi"
     }
 
 }
+
+export let addMessage = () => {
+    let newMessages = {
+        id:8,
+        message: state.dialogPage.newMessagesText
+    };
+state.dialogPage.messages.push(newMessages);
+state.dialogPage.newMessagesText = '';
+rerenderEntireTree(state);
+}
+
+export let updataNewMessageText = (newMessages) => {
+    state.dialogPage.newMessagesText = newMessages;
+    rerenderEntireTree(state);
+};
 
 export let addPost = () => {
     let newPost = {
